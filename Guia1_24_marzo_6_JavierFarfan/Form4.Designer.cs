@@ -28,12 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form4";
+            button1 = new Button();
+            dataGridView1 = new DataGridView();
+            vecto1 = new DataGridViewTextBoxColumn();
+            vecto2 = new DataGridViewTextBoxColumn();
+            sum = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
+            // 
+            // button1
+            // 
+            button1.Location = new Point(144, 211);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 0;
+            button1.Text = "calcular";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { vecto1, vecto2, sum });
+            dataGridView1.Location = new Point(308, 142);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(342, 150);
+            dataGridView1.TabIndex = 1;
+            // 
+            // vecto1
+            // 
+            vecto1.HeaderText = "vecto1";
+            vecto1.Name = "vecto1";
+            // 
+            // vecto2
+            // 
+            vecto2.HeaderText = "vecto2";
+            vecto2.Name = "vecto2";
+            // 
+            // sum
+            // 
+            sum.HeaderText = "sum";
+            sum.Name = "sum";
+            // 
+            // Form4
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(dataGridView1);
+            Controls.Add(button1);
+            Name = "Form4";
+            Text = "Form4";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button button1;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn vecto1;
+        private DataGridViewTextBoxColumn vecto2;
+        private DataGridViewTextBoxColumn sum;
     }
 }
